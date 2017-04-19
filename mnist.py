@@ -137,8 +137,8 @@ def conv_layer(input, size_in, size_out, name="conv"):
     #3 For each patch, right-multiplies the filter matrix and the image patch vector.
     conv = tf.nn.conv2d(input, w, strides=[1, 1, 1, 1], padding="SAME")
     #nonlin relu reduces likelihood of vanishing gradient, most used activation function these days
-    act = tf.nn.relu(conv + b)
-    , or the distribution of gradients or weights. 
+    #act = tf.nn.relu(conv + b)
+    #, or the distribution of gradients or weights. 
     #we can collect this data by attaching tf.summary.histogram ops to the gradient outputs and to the variable that holds weights, respectively.
     #visualize the the distribution of weights and biases
     tf.summary.histogram("weights", w)
